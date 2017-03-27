@@ -1,0 +1,25 @@
+<div class="panel panel-default" ng-init="getGenres()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Genres</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="genre in genres">
+          <tr>
+            <td>{{genre.name}}</td>
+            <td><a href="#/genres/edit/{{genre._id}}">Edit</a> / <a href="" ng-click="removeGenre(genre._id)">Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
